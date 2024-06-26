@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>{% block title %}EcoTreats raTATATA{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+    <script src="https://kit.fontawesome.com/ea5763dd29.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div class="navbar">
+    <div class="nav-links">
+        <a href="/">Home</a>
+        <a href="/store">Store</a>
+    </div>
+    <div class="profile-cart-container">
+                <div class="cart">
+            <a class="nav-link" href="/cart"><i class="fa-solid fa-basket-shopping"></i></a>
+            <span id="quantity" class="quantity">{{ session['cart_quantity'] }}</span>
+        </div>
+        <a href="javascript:void(0)" class="profile-icon" onclick="openNav()">
+            <i class="fa-solid fa-user"></i>
+        </a>
+
+    </div>
+</div>
+
+<div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <div class="username-container">
+        <p>Gyat</p>
+    </div>
+    <a href="/create_product">Create Product</a>
+    <a href="/retrieve_product">Products</a>
+<!--    <a href="#" id="logout">Logout</a>-->
+</div>
+
+{% block content %}
+{% endblock %}
+
+<script>
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
+</script>
+
+</body>
+</html>

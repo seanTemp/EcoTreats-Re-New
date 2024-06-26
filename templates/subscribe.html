@@ -1,0 +1,85 @@
+{% extends 'base.html' %}
+
+{% block title %}Store{% endblock %}
+
+{% block content %}
+
+<!-- subscribe.html -->
+
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subscription</title>
+</head>
+<body>
+    <h1>Subscribe to Our Monthly Plan</h1>
+    <form method="POST" action="{{ url_for('subscribe') }}">
+        {{ form.hidden_tag() }}
+
+        <p>
+            {{ form.name.label }}<br>
+            {{ form.name(size=32) }}<br>
+            {% for error in form.name.errors %}
+                <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+        <p>
+            {{ form.email.label }}<br>
+            {{ form.email(size=32) }}<br>
+            {% for error in form.email.errors %}
+                <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+        <p>
+            {{ form.address.label }}<br>
+            {{ form.address(size=32) }}<br>
+            {% for error in form.address.errors %}
+                <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+        <p>
+            {{ form.phone.label }}<br>
+            {{ form.phone(size=32) }}<br>
+            {% for error in form.phone.errors %}
+                <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+        <p>
+            {{ form.subscription_type.label }}<br>
+            {{ form.subscription_type() }}<br>
+            {% for error in form.subscription_type.errors %}
+                <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+        <p>
+            {{ form.card_number.label }}<br>
+            {{ form.card_number(size=20) }}<br>
+            {% for error in form.card_number.errors %}
+                <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+        <p>
+            {{ form.card_expiry.label }}<br>
+            {{ form.card_expiry(size=7) }}<br>
+            {% for error in form.card_expiry.errors %}
+                <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+        <p>
+            {{ form.card_cvc.label }}<br>
+            {{ form.card_cvc(size=5) }}<br>
+            {% for error in form.card_cvc.errors %}
+                <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+        <p><input type="submit" value="Subscribe"></p>
+    </form>
+</body>
+</html>
+
+
+
+
+{% endblock %}

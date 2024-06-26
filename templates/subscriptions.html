@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+
+{% block title %}Subscriptions{% endblock %}
+
+{% block content %}
+
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subscriptions</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <h1>All Subscriptions</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Address</th>
+                <th>Phone</th>
+                <th>Subscription Type</th>
+                <th>Card Number</th>
+                <th>Card Expiry</th>
+                <th>Card CVC</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for subscription in subscriptions %}
+            <tr>
+                <td>{{ subscription.id }}</td>
+                <td>{{ subscription.name }}</td>
+                <td>{{ subscription.email }}</td>
+                <td>{{ subscription.address }}</td>
+                <td>{{ subscription.phone }}</td>
+                <td>{{ subscription.subscription_type }}</td>
+                <td>{{ subscription.card_number }}</td>
+                <td>{{ subscription.card_expiry }}</td>
+                <td>{{ subscription.card_cvc }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
+
+{% endblock %}

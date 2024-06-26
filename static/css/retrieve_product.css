@@ -1,0 +1,61 @@
+/* Custom CSS for Products Retrieve Page */
+
+/* Styles for the search form */
+.mb-3 .form-control {
+    width: 70%; /* Adjust width as needed */
+    margin-right: 10px; /* Add some space between input and button */
+}
+
+.mb-3 .btn-primary {
+    width: 20%; /* Adjust width as needed */
+}
+
+/* Styles for product count */
+.count {
+    margin-bottom: 20px; /* Add some space between count and create button */
+}
+
+/* Styles for create button */
+.btn-warning {
+    margin-bottom: 20px; /* Add some space between create button and table */
+}
+
+/* Styles for table */
+.table-striped th,
+.table-striped td {
+    text-align: center; /* Center align text in table cells */
+    vertical-align: middle; /* Center vertically */
+    border: 1px solid #dee2e6; /* Add border to table cells */
+}
+
+/* Styles for modal */
+.modal-content {
+    border: 1px solid #ccc; /* Add border to modal content */
+}
+
+.modal-header {
+    border-bottom: 1px solid #dee2e6; /* Add border to modal header */
+}
+
+/* Styles for buttons */
+.btn-danger,
+.btn-primary,
+.btn-warning {
+    border-radius: 5px; /* Add border radius to buttons */
+    border: 1px solid transparent; /* Add border to buttons */
+}
+
+.btn-danger:hover,
+.btn-primary:hover,
+.btn-warning:hover {
+    border-color: #ccc; /* Change border color on hover */
+}
+
+/* Styles for Go Top button */
+.btn-warning[href="#top"] {
+    position: fixed; /* Fix the button at bottom right */
+    bottom: 20px; /* Adjust distance from bottom as needed */
+    right: 20px; /* Adjust distance from right as needed */
+    border: 1px solid #ccc; /* Add border to button */
+    border-radius: 5px; /* Add border radius to button */
+}

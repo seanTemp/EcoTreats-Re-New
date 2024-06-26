@@ -1,0 +1,125 @@
+body {
+    font-family: 'Khula', 'Nova Square', 'Poppins', 'Roboto', Arial, sans-serif;
+    background-color: #bec5ad;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    background-color: #522b29;
+    padding: 20px;
+}
+
+.navbar a {
+    color: white;
+    padding: 14px 20px;
+    text-decoration: none;
+    text-align: center;
+    font-size: 20px;
+}
+
+.navbar a:hover {
+    background-color: #bec5ad;
+    border-radius: 15px;
+    color: black;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #333;
+    padding-left:30px;
+}
+
+p {
+    color: #666;
+}
+
+.products-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.product-item {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
+    width: calc(33.333% - 40px);
+}
+
+.product-img {
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.product-details {
+    margin-top: 10px;
+}
+
+.product-details p {
+    margin: 5px 0;
+}
+
+.price {
+    color: #522b29;
+    font-weight: bold;
+}
+
+.modal-content {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+}
+
+.modal-header img {
+    border-radius: 8px;
+}
+
+.modal-info {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.quantity-input {
+    display: flex;
+    align-items: center;
+}
+
+.quantity-input label {
+    margin-right: 10px;
+}
+
+.quantity-input input {
+    width: 50px;
+    padding: 5px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+.btn {
+    background-color: #522b29;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #401f1d;
+}

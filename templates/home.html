@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<h1>Home Page</h1>
+<p>erm... what the sigma!</p>
+<h1>Welcome, {{ current_user.username }}</h1>
+    <a href="{{ url_for('logout') }}">Logout</a>
+{% endblock %}
